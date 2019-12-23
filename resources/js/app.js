@@ -60,8 +60,7 @@ $( document ).ready(function() {
 		});
     });
 
-
-    $('.change_status').click(function () {
+    $('#tasks_table').on('click','.change_status',function () {
     	let task_id =  $(this).data('task-id');
     	let checked = $(this).prop("checked") ? 1 : 0;
     	$.ajax({
@@ -83,7 +82,7 @@ $( document ).ready(function() {
 		});
     });
 
-     $('.change_description').click(function () {
+    $('#tasks_table').on('click','.change_description',function () {
      	let description =  $(this).data('task-description');
      	let task_id = $(this).data('task-id');
      	$('#new_description').val(description);
